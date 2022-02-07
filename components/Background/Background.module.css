@@ -2,7 +2,7 @@
 .largeHeader {
     position: relative;
     width: 100%;
-    background: black;
+    background: linear-gradient(180deg, rgba(2,0,36,1) 0%, rgba(9,19,121,1) 35%, rgba(9,113,121,1) 100%);
     overflow: hidden;
     background-size: cover;
     background-position: center center;

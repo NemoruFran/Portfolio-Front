@@ -1,8 +1,9 @@
 
+import styles from "./Header.module.css";
 
 const Header = () => {
     return (
-        <div>
+        <div id="header" className={styles.header}>
 
         </div>
     )
