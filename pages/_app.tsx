@@ -5,17 +5,19 @@ import Header from "../components/Header";
 import Background from "../components/Background";
 import Head from "next/head";
 import Script from "next/script";
+import {useEffect} from "react";
+// @ts-ignore
+import graphPointsMouse from './bgScript';
+
 
 function MyApp({ Component, pageProps }: AppProps) {
 
+    useEffect(() => {
+        graphPointsMouse({a:0,b:0,c:0},{a:0,b:0,c:0});
+    },[])
+
     return(
         <div>
-            <Head>
-                {/* eslint-disable-next-line @next/next/no-sync-scripts */}
-                <script src="http://cdnjs.cloudflare.com/ajax/libs/gsap/1.18.0/TweenMax.min.js"></script>
-                {/* eslint-disable-next-line @next/next/no-sync-scripts */}
-                <script type="text/javascript" src="../static/bgScript.js" ></script>
-            </Head>
             <Header />
             <Background>
                 <Component {...pageProps} />

@@ -7,16 +7,13 @@ interface Props{
 
 export default function Background (props:Props){
     return (
-        <div className={styles.backgroundImage}>
-            <div id="largeHeader" className={styles.largeHeader}>
-                <canvas id="demo-canvas">
+        <div>
+            <div id="largeHeader">
+                <canvas id="demo-canvas" className="absolute z-0" />
+                <div className={styles.largeHeader}>
                     {props.children}
-                </canvas>
+                </div>
             </div>
-            {/* eslint-disable-next-line @next/next/no-sync-scripts */}
-            <script src="http://cdnjs.cloudflare.com/ajax/libs/gsap/1.18.0/TweenMax.min.js"></script>
-            {/* eslint-disable-next-line @next/next/no-sync-scripts */}
-            <script type="text/javascript" src="../static/bgScript.js" ></script>
         </div>
     )
 }
